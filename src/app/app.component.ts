@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { SocialSparkService } from './social-spark.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,7 @@ export class AppComponent {
   isContinue = false;
   activeUpload = true;
   activeGenerate = false;
-  constructor(private router: Router){
+  constructor(private socialSparkService:SocialSparkService){
   }
 
   ngOnInit(): void {
@@ -39,5 +41,17 @@ export class AppComponent {
   genereatedPosts(){
     this.isgenereated =  true;
     this.isUpload = false;
+  }
+
+  getFileData(event: any){
+    let file = event.target.files[0];
+    let fd = new FormData();
+    fd.append('file', file,);
+    this.socialSparkService.getPostViaFile(fd)
+    // .subscribe(posts => {
+    //   }, (err: HttpErrorResponse) => {
+    //     console.log("Error:",err.error);
+    //   });
+    
   }
 }

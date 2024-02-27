@@ -18,16 +18,26 @@
   <div class="tab-content">
     <ul class="nav nav-tabs">
       <li class="nav-item" (click)="uploadFile()">
-        <a class="nav-link text-secondary">Upload File</a>
+        <a class="nav-link text-secondary">Upload File
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-secondary" (click)="genereatedPosts()">Generated Posts</a>
       </li>
     </ul>
-    <div *ngIf="isUpload">
+    <div *ngIf="isUpload" class="btn-upload uploadFile">
 
-      upload
-      
+
+      <div>
+        <label class="label-upload d-flex">
+          <span>Select a Text Document</span> 
+          &nbsp;
+          <i class="fa fa-upload" style="font-size:30px;color:white"></i>
+
+
+          <input type="file" onclick="value = null" (change)="getFileData($event)" />
+        </label>
+      </div>      
     </div>
     <div *ngIf="isgenereated">
       Generated

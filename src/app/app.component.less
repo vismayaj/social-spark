@@ -48,9 +48,37 @@
 
 }
 
-.nav-item{
-    // :hover{
-    //     background-color: black;
-    //     color: #ffffff;
-    // }
+.uploadFile{
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.label-upload{
+
+    width: 375px;
+    height: 50px;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    span{
+        font-size: 26px;
+        font-family: cursive;
+    }
+}
+
+
+.btn-upload input[type="file"] {
+    position: absolute;
+    top: -9999999;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+    cursor: inherit;
+    display: none;
+  }
