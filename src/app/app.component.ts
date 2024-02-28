@@ -111,8 +111,14 @@ export class AppComponent {
     this.popup = true;
   }
 
+  publish(){
+    this.popupp = true;
+  }
+
+  popupp = false; 
   cancel(){
     this.popup = false;
+    this.popupp = false; 
   }
 
 
