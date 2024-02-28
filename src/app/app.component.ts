@@ -37,6 +37,7 @@ export class AppComponent {
     // this.router.navigate(["generate-post"]);
     this.isContinue = true
     this.isRel = true;
+    this.backToCampain()
   }
 
 
@@ -86,5 +87,11 @@ export class AppComponent {
   popup = false;
   addRelease(){
     this.popup = true;
+  }
+
+  cancel(){
+    this.popup = false;
+
+
   }
 }
