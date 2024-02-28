@@ -45,6 +45,7 @@ export class AppComponent {
   uploadFile(){
     this.isUpload = true;
     this.isgenereated =  false;
+    this.continuePosting()
 
   }
 
@@ -80,5 +81,10 @@ export class AppComponent {
     this.isRel = false;
     this.isPost = false;
 
+  }
+
+  popup = false;
+  addRelease(){
+    this.popup = true;
   }
 }

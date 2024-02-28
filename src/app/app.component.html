@@ -36,12 +36,9 @@
   <div *ngIf="isRel" class="contentt">
     <div class="releases-header d-flex justify-content-between">
       <span>Releases</span>
-      <label class="label-upload d-flex btn-upload " matToolTip="Upload Release Note">
-        <i class="fa fa-upload" style="font-size:30px;color:white"></i> &nbsp;
-          Upload Release Note
-
-        <input type="file" onclick="value = null" (change)="getFileData($event)" />
-      </label>
+      <button class="back-campaing" (click)="addRelease()">
+        Add Release Note
+      </button>
     </div>
     <div class="releases-body">
       <div class="list-release">
@@ -219,6 +216,36 @@
           #Qyrus #Testing #API</p>
       </div>
   </div>  
+  </div>
+</div>
+
+  
+<div *ngIf="popup" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Select Your Release Notes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Release Notes
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">Release Notes1 : June</a>
+                <a class="dropdown-item" href="#">Release Notes2 : July</a>
+                <a class="dropdown-item" href="#">Release Notes3: Aug</a>
+              </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
   </div>
 </div>
 
