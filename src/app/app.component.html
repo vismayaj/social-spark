@@ -1,4 +1,4 @@
-<div *ngIf="isContinue" >
+<div *ngIf="!isContinue" >
   <div  class="header">
     <span>QSPARK</span>
   </div>
@@ -19,25 +19,27 @@
   </div>
 </div>
 
-<div *ngIf="!isContinue" class="body">
+<div *ngIf="isContinue" class="body">
   <div class="sidebar">
     <h2 style="font-style: cursive;"><img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
       QSpark</h2>
     <nav>
       <ul class="nav flex-column">
         <!-- <li class="nav-item nav-list"><a class="nav-link text-dark" href="#">Admin</a></li> -->
-        <li class="nav-item"><a class="nav-link text-dark" href="#">Releases</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#">Campaign</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#">Analytics</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" (click)="isRelease()" href="#">Releases</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#" (click)="backToCampain()">Campaign</a></li>
+        <!-- <li class="nav-item"><a class="nav-link text-dark" href="#">Analytics</a></li> -->
       </ul>
     </nav>
   </div>
   
-  <!-- <div class="contentt">
+  <div *ngIf="isRel" class="contentt">
     <div class="releases-header d-flex justify-content-between">
       <span>Releases</span>
       <label class="label-upload d-flex btn-upload " matToolTip="Upload Release Note">
-        <i class="fa fa-upload" style="font-size:30px;color:white"></i>
+        <i class="fa fa-upload" style="font-size:30px;color:white"></i> &nbsp;
+          Upload Release Note
+
         <input type="file" onclick="value = null" (change)="getFileData($event)" />
       </label>
     </div>
@@ -49,8 +51,42 @@
         <h6>v4.14.0 - API Release Notes</h6>
       </div>
 
+      <div class="list-release">
+        <h5>
+          Sep 29, 2024
+        </h5>
+        <h6>v4.14.0 - API Release Notes</h6>
+      </div>
+
+      <div class="list-release">
+        <h5>
+          Sep 29, 2024
+        </h5>
+        <h6>v4.14.0 - API Release Notes</h6>
+      </div>
+
+      <div class="list-release">
+        <h5>
+          Sep 29, 2024
+        </h5>
+        <h6>v4.14.0 - API Release Notes</h6>
+      </div>
+
+      <div class="list-release">
+        <h5>
+          Sep 29, 2024
+        </h5>
+        <h6>v4.14.0 - API Release Notes</h6>
+      </div>
+      <div class="list-release">
+        <h5>
+          Sep 29, 2024
+        </h5>
+        <h6>v4.14.0 - API Release Notes</h6>
+      </div>
+
     </div>
-  </div> -->
+  </div>
   
 
 
@@ -58,14 +94,11 @@
 
   <!-- for campain -->
 
-<!-- 
+
   <div *ngIf="isCamp" class="contentt">
     <div class="releases-header d-flex justify-content-between">
       <span>Campaign</span>
-      <label class="label-upload d-flex btn-upload " matToolTip="Upload Release Note">
-        <i class="fa fa-upload" style="font-size:30px;color:white"></i>
-        <input type="file" onclick="value = null" (change)="getFileData($event)" />
-      </label>
+
     </div>
     <div class="releases-body">
       <div class="list-release d-flex justify-content-between">
@@ -75,7 +108,7 @@
           </h5>
           <h6>April's Campaign for Instagarm (APIS & SV)</h6>
         </div>
-        <button class="gotopost">Go to post</button>
+        <button class="gotopost" (click)="gotoPost()">Go to post</button>
 
       </div>
 
@@ -88,8 +121,6 @@
 
         </div>
         <button class="gotopost" (click)="gotoPost()">Go to post</button>
-
-
       </div>
 
       <div class="list-release d-flex justify-content-between">
@@ -99,17 +130,46 @@
           </h5>
           <h6>June's Campaign for X (Mobile Testing)</h6>
         </div>
-        <button class="gotopost">Go to post</button>
+        <button class="gotopost" (click)="gotoPost()">Go to post</button>
+      </div>
 
+      <div class="list-release d-flex justify-content-between">
+        <div>
+          <h5>
+            Jun 29, 2024
+          </h5>
+          <h6>June's Campaign for X (Mobile Testing)</h6>
+        </div>
+        <button class="gotopost" (click)="gotoPost()">Go to post</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div>
+          <h5>
+            Jun 29, 2024
+          </h5>
+          <h6>June's Campaign for X (Mobile Testing)</h6>
+        </div>
+        <button class="gotopost" (click)="gotoPost()">Go to post</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div>
+          <h5>
+            Jun 29, 2024
+          </h5>
+          <h6>June's Campaign for X (Mobile Testing)</h6>
+        </div>
+        <button class="gotopost" (click)="gotoPost()">Go to post</button>
       </div>
 
     </div>
   </div>  
-</div> -->
+</div>
 
 
 
-<div class="contentt">
+<div *ngIf="isPost"  class="contentt">
   <div class="releases-header d-flex justify-content-between">
     <span>Posts</span>
     <button (click)="backToCampain()" class="back-campaing">

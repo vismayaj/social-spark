@@ -26,10 +26,20 @@ export class AppComponent {
 
   }
 
+
+  isRel = false;
+  isRelease(){
+    this.isRel = true;
+    this.isCamp = false; 
+    this.isPost = false
+  }
   continuePosting(){
     // this.router.navigate(["generate-post"]);
     this.isContinue = true
+    this.isRel = true;
   }
+
+
 
   isUpload = false;
   uploadFile(){
@@ -61,9 +71,14 @@ export class AppComponent {
 
   gotoPost(){
     this.isPost = true
+    this.isCamp = false;
+    this.isRel = false;
   }
 
   backToCampain(){
     this.isCamp = true;
+    this.isRel = false;
+    this.isPost = false;
+
   }
 }
