@@ -25,18 +25,39 @@
       QSpark</h2>
     <nav>
       <ul class="nav flex-column">
-        <!-- <li class="nav-item nav-list"><a class="nav-link text-dark" href="#">Admin</a></li> -->
-        <li class="nav-item"><a class="nav-link text-dark" (click)="isRelease()" href="#">Releases</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#" (click)="backToCampain()">Campaign</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#">Trendings</a></li>
+        <li class="nav-item nav-list"><a class="nav-link text-dark" (click)="adminpage()">Admin</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" (click)="isRelease()">Releases</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" (click)="backToCampain()">Campaign</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" (click)="trending()" >Trendings</a></li>
       </ul>
     </nav>
   </div>
-  
+
+  <div *ngIf="isAdmin" class="contentt">
+    <div class="releases-header d-flex justify-content-between">
+      <span>Admin Account</span>
+
+    </div>
+    <div class="">
+
+      <span style="font-size: 24px;">Link your social accunts</span>
+      <div style="width: 700px; display: grid;">
+        <a href="#" class="fa fa-twitter faad"></a>
+        <a href="#" class="fa fa-linkedin faad"></a>
+        <a href="#" class="fa fa-instagram faad"></a>
+        <a href="#" class="fa fa-pinterest faad"></a>
+      </div>
+
+      
+
+
+    </div>
+  </div>
+
   <div *ngIf="isRel" class="contentt">
     <div class="releases-header d-flex justify-content-between">
       <span>Releases</span>
-      <button class="back-campaing" (click)="addRelease()">
+      <button class="back-campaing" >
         Add Release Note
       </button>
     </div>
@@ -49,7 +70,7 @@
           <h6>v4.14.0 - API Release Notes</h6>
 
           </div>
-        <button class="gotopost" (click)="addRelease()" style="width: 200px;"> Create Campaign</button>
+        <button class="gotopost"  style="width: 200px;"> Create Campaign</button>
       </div>
       <div class="list-release d-flex justify-content-between">
         <div style="margin-left: 10px;">
@@ -59,18 +80,7 @@
           <h6>v4.14.0 - API Release Notes</h6>
 
           </div>
-        <button class="gotopost" (click)="addRelease()" style="width: 200px;"> Create Campaign</button>
-      </div>
-
-      <div class="list-release d-flex justify-content-between">
-        <div style="margin-left: 10px;">
-          <h5>
-            Sep 29, 2024
-          </h5>
-          <h6>v4.14.0 - API Release Notes</h6>
-
-          </div>
-        <button class="gotopost" (click)="addRelease()" style="width: 200px;"> Create Campaign</button>
+        <button class="gotopost" style="width: 200px;"> Create Campaign</button>
       </div>
 
       <div class="list-release d-flex justify-content-between">
@@ -81,7 +91,7 @@
           <h6>v4.14.0 - API Release Notes</h6>
 
           </div>
-        <button class="gotopost" (click)="addRelease()" style="width: 200px;"> Create Campaign</button>
+        <button class="gotopost" style="width: 200px;"> Create Campaign</button>
       </div>
 
       <div class="list-release d-flex justify-content-between">
@@ -92,7 +102,7 @@
           <h6>v4.14.0 - API Release Notes</h6>
 
           </div>
-        <button class="gotopost" (click)="addRelease()" style="width: 200px;"> Create Campaign</button>
+        <button class="gotopost"  style="width: 200px;"> Create Campaign</button>
       </div>
 
       <div class="list-release d-flex justify-content-between">
@@ -103,7 +113,96 @@
           <h6>v4.14.0 - API Release Notes</h6>
 
           </div>
-        <button class="gotopost" (click)="addRelease()" style="width: 200px;"> Create Campaign</button>
+        <button class="gotopost" style="width: 200px;"> Create Campaign</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost"  style="width: 200px;"> Create Campaign</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  
+  <div *ngIf="isRel" class="contentt">
+    <div class="releases-header d-flex justify-content-between">
+      <span>Releases</span>
+      <button class="back-campaing" >
+        Add Release Note
+      </button>
+    </div>
+    <div class="releases-body">
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost"  style="width: 200px;"> Create Campaign</button>
+      </div>
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost" style="width: 200px;"> Create Campaign</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost" style="width: 200px;"> Create Campaign</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost"  style="width: 200px;"> Create Campaign</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost" style="width: 200px;"> Create Campaign</button>
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div style="margin-left: 10px;">
+          <h5>
+            Sep 29, 2024
+          </h5>
+          <h6>v4.14.0 - API Release Notes</h6>
+
+          </div>
+        <button class="gotopost"  style="width: 200px;"> Create Campaign</button>
       </div>
 
     </div>
@@ -193,28 +292,41 @@
 
 
 
-<div *ngIf="isPost"  class="contentt">
+<div *ngIf="isPost ||isTrend"  class="contentt">
   <div class="releases-header d-flex justify-content-between">
-    <span>Posts</span>
+    <span *ngIf="!isTrend">Posts</span>
+    <span *ngIf="isTrend"> Trendings</span>
     <button (click)="backToCampain()" class="back-campaing">
       Back to Campaigns
     </button>
   </div>
   <div class="post-body">
-        <div class="post">
-          <div class="post-header">
-              <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
-              <span class="username">QyrusAI</span>
-          </div>
-          <div class="post-image">
-              <img src="./../assets/Screenshot 2024-02-28 114210.png" alt="Post Image">
-          </div>
-          <div class="post-caption">
-              <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
-  
-              #Qyrus #Testing #API</p>
-          </div>
+    <div class="m-1">
+      <div class="post">
+        <div class="post-header">
+            <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
+            <span class="username">QyrusAI</span>
+        </div>
+        <div class="post-image">
+            <img src="./../assets/Screenshot 2024-02-28 114210.png" alt="Post Image">
+        </div>
+        <div class="post-caption">
+            <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
+
+            #Qyrus #Testing #API</p>
+        </div>
       </div>
+
+      <div>
+        <button type="button" class="button postbutton">Edit &nbsp;<i class="fa fa-pencil"></i></button>
+        <button type="button" class="button postbutton">Schedule Post &nbsp;<i class="fa fa-calendar"></i></button>
+        <button type="button" class="button postbutton">Delete &nbsp; <i class="fa fa-trash"></i></button>
+        <button type="button" class="button postbutton"><span>Publish&nbsp;<i class="fa fa-paper-plane"></i></span></button>
+
+      </div>
+
+    </div>
+    <div class="m-1">
       <div class="post">
         <div class="post-header">
             <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
@@ -228,22 +340,45 @@
 
             #Qyrus #Testing #API</p>
         </div>
-    </div>  
-    <div class="post">
-      <div class="post-header">
-          <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
-          <span class="username">QyrusAI</span>
       </div>
-      <div class="post-image">
-          <img src="./../assets/Screenshot 2024-02-28 114227.png" alt="Post Image">
-      </div>
-      <div class="post-caption">
-          <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
 
-          #Qyrus #Testing #API</p>
+      <div class="m-1">
+        <button type="button" class="button postbutton">Edit &nbsp;<i class="fa fa-pencil"></i></button>
+        <button type="button" class="button postbutton">Schedule Post &nbsp;<i class="fa fa-calendar"></i></button>
+        <button type="button" class="button postbutton">Delete &nbsp; <i class="fa fa-trash"></i></button>
+        <button type="button" class="button postbutton"><span>Publish&nbsp;<i class="fa fa-paper-plane"></i></span></button>
+
       </div>
+
+    </div>
+    <div>
+      <div class="post">
+        <div class="post-header">
+            <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
+            <span class="username">QyrusAI</span>
+        </div>
+        <div class="post-image">
+            <img src="./../assets/Screenshot 2024-02-28 114227.png" alt="Post Image">
+        </div>
+        <div class="post-caption">
+            <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
+
+            #Qyrus #Testing #API</p>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" class="button postbutton">Edit &nbsp;<i class="fa fa-pencil"></i></button>
+        <button type="button" class="button postbutton">Schedule Post &nbsp;<i class="fa fa-calendar"></i></button>
+        <button type="button" class="button postbutton">Delete &nbsp; <i class="fa fa-trash"></i></button>
+        <button type="button" class="button postbutton"><span>Publish&nbsp;<i class="fa fa-paper-plane"></i></span></button>
+
+      </div>
+
+    </div>
   </div>  
-  </div>
+
+  
 </div>
 
   
@@ -251,25 +386,46 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Select Your Release Notes</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Create Campaign</h5>
         <button type="button" class="close" data-dismiss="modal" (click)="cancel()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-          <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Release Notes
+
+        <div class="d d-flex" style="width: 400px;">
+          <div class="m-2" (click)="manualCreate()">
+            <input type="radio" id="html" name="fav_language" value="HTML" checked> 
+            <label class="ml-2" for="html">Via Text</label>
+          </div>
+          <div class="m-2" (click)="viaRelaseCreate()">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label class="ml-2" for="html">Via Release Note</label>
+          </div>
+        </div>
+
+
+
+
+        <div *ngIf="isManual" style="display: grid;">
+          <span>Enter a Text </span>
+          <input type="text" style="height: 100px;">
+        </div>
+
+
+          <div *ngIf="!isManual" class="dropdown">
+              <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Release Note
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="index.html">Release Notes1 : June</a>
-                <a class="dropdown-item" href="#">Release Notes2 : July</a>
-                <a class="dropdown-item" href="#">Release Notes3: Aug</a>
+                <a class="dropdown-item">Release Notes1 : June</a>
+                <a class="dropdown-item">Release Notes2 : July</a>
+                <a class="dropdown-item">Release Notes3: Aug</a>
               </div>
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-light" (click)="cancel()">Create</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>

@@ -32,12 +32,26 @@ export class AppComponent {
     this.isRel = true;
     this.isCamp = false; 
     this.isPost = false
+    this.isTrend = false;
+    this.isAdmin = false;
+
+
   }
   continuePosting(){
     // this.router.navigate(["generate-post"]);
     this.isContinue = true
-    this.isRel = true;
-    this.backToCampain()
+    this.isAdmin = true;
+    // this.trending()
+
+  }
+
+  isAdmin = false;
+  adminpage(){
+    this.isAdmin = true;
+    this.isTrend = false;
+    this.isRel = false;
+    this.isPost = false;
+    this.isCamp = false
   }
 
 
@@ -75,12 +89,20 @@ export class AppComponent {
     this.isPost = true
     this.isCamp = false;
     this.isRel = false;
+    this.isTrend = false;
+    this.isAdmin = false;
+
+
   }
 
   backToCampain(){
     this.isCamp = true;
     this.isRel = false;
     this.isPost = false;
+    this.isTrend = false;
+    this.isAdmin = false;
+
+
 
   }
 
@@ -91,7 +113,30 @@ export class AppComponent {
 
   cancel(){
     this.popup = false;
+  }
+
+
+  isManual = true;
+  manualCreate(){
+    this.isManual = true;
+
+  }
+  viaRelaseCreate(){
+    this.isManual = false;
 
 
   }
+
+
+  isTrend = false
+  trending(){
+    this.isTrend = true
+    this.isRel = false;
+    this.isPost = false;
+    this.isCamp = false
+    this.isAdmin = false;
+
+  }
+
+
 }
