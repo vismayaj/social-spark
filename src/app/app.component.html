@@ -1,11 +1,16 @@
-<div *ngIf="!isContinue" >
+<div *ngIf="isContinue" >
   <div  class="header">
     <span>QSPARK</span>
   </div>
 
   <div class="content">
     <h1>Qspark platform houses all marketing resources necessary to support the marketing efforts in one place.
-      <em class="animated"><svg class="nectar-scribble basic-underline" viewBox="-400 -55 730 60" preserveAspectRatio="none"><path style="animation-duration: 0s;" d="m -383.25 -6 c 55.25 -22 130.75 -33.5 293.25 -38 c 54.5 -0.5 195 -2.5 401 15" stroke="#0a0101" pathLength="1" stroke-width="14" fill="none"></path></svg></em></h1>
+      <em class="animated">
+        <svg class="nectar-scribble basic-underline" viewBox="-400 -55 730 60" preserveAspectRatio="none">
+          <path style="animation-duration: 0s;" d="m -383.25 -6 c 55.25 -22 130.75 -33.5 293.25 -38 c 54.5 -0.5 195 -2.5 401 15" stroke="#0a0101" pathLength="1" stroke-width="14" fill="none"></path>
+        </svg>
+      </em>
+    </h1>
   </div>
   <div class="continue">
     <button (click)="continuePosting()">
@@ -14,35 +19,150 @@
   </div>
 </div>
 
-<div *ngIf="isContinue" class="body">
-  <div class="tab-content">
-    <ul class="nav nav-tabs">
-      <li class="nav-item" (click)="uploadFile()">
-        <a class="nav-link text-secondary">Upload File
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-secondary" (click)="genereatedPosts()">Generated Posts</a>
-      </li>
-    </ul>
-    <div *ngIf="isUpload" class="btn-upload uploadFile">
-
-
-      <div>
-        <label class="label-upload d-flex">
-          <span>Select a Text Document</span> 
-          &nbsp;
-          <i class="fa fa-upload" style="font-size:30px;color:white"></i>
-
-
-          <input type="file" onclick="value = null" (change)="getFileData($event)" />
-        </label>
-      </div>      
+<div *ngIf="!isContinue" class="body">
+  <div class="sidebar">
+    <h2 style="font-style: cursive;"><img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
+      QSpark</h2>
+    <nav>
+      <ul class="nav flex-column">
+        <!-- <li class="nav-item nav-list"><a class="nav-link text-dark" href="#">Admin</a></li> -->
+        <li class="nav-item"><a class="nav-link text-dark" href="#">Releases</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#">Campaign</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#">Analytics</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- <div class="contentt">
+    <div class="releases-header d-flex justify-content-between">
+      <span>Releases</span>
+      <label class="label-upload d-flex btn-upload " matToolTip="Upload Release Note">
+        <i class="fa fa-upload" style="font-size:30px;color:white"></i>
+        <input type="file" onclick="value = null" (change)="getFileData($event)" />
+      </label>
     </div>
-    <div *ngIf="isgenereated">
-      Generated
+    <div class="releases-body">
+      <div class="list-release">
+        <h5>
+          Sep 29, 2024
+        </h5>
+        <h6>v4.14.0 - API Release Notes</h6>
+      </div>
+
     </div>
+  </div> -->
+  
+
+
+
+
+  <!-- for campain -->
+
+<!-- 
+  <div *ngIf="isCamp" class="contentt">
+    <div class="releases-header d-flex justify-content-between">
+      <span>Campaign</span>
+      <label class="label-upload d-flex btn-upload " matToolTip="Upload Release Note">
+        <i class="fa fa-upload" style="font-size:30px;color:white"></i>
+        <input type="file" onclick="value = null" (change)="getFileData($event)" />
+      </label>
+    </div>
+    <div class="releases-body">
+      <div class="list-release d-flex justify-content-between">
+        <div>
+          <h5>
+            Apr 29, 2024
+          </h5>
+          <h6>April's Campaign for Instagarm (APIS & SV)</h6>
+        </div>
+        <button class="gotopost">Go to post</button>
+
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div>
+          <h5>
+            Jun 29, 2024
+          </h5>
+          <h6>June's Campaign for X (Mobile Testing)</h6>
+
+        </div>
+        <button class="gotopost" (click)="gotoPost()">Go to post</button>
+
+
+      </div>
+
+      <div class="list-release d-flex justify-content-between">
+        <div>
+          <h5>
+            Jun 29, 2024
+          </h5>
+          <h6>June's Campaign for X (Mobile Testing)</h6>
+        </div>
+        <button class="gotopost">Go to post</button>
+
+      </div>
+
+    </div>
+  </div>  
+</div> -->
+
+
+
+<div class="contentt">
+  <div class="releases-header d-flex justify-content-between">
+    <span>Posts</span>
+    <button (click)="backToCampain()" class="back-campaing">
+      Back to Campaigns
+    </button>
+  </div>
+  <div class="post-body">
+        <div class="post">
+          <div class="post-header">
+              <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
+              <span class="username">QyrusAI</span>
+          </div>
+          <div class="post-image">
+              <img src="./../assets/Screenshot 2024-02-28 114210.png" alt="Post Image">
+          </div>
+          <div class="post-caption">
+              <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
+  
+              #Qyrus #Testing #API</p>
+          </div>
+      </div>
+      <div class="post">
+        <div class="post-header">
+            <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
+            <span class="username">QyrusAI</span>
+        </div>
+        <div class="post-image">
+            <img src="./../assets/Screenshot 2024-02-28 114301.png" alt="Post Image">
+        </div>
+        <div class="post-caption">
+            <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
+
+            #Qyrus #Testing #API</p>
+        </div>
+    </div>  
+    <div class="post">
+      <div class="post-header">
+          <img src="./../assets/Qyrus AI Bot.svg" alt="Profile Picture">
+          <span class="username">QyrusAI</span>
+      </div>
+      <div class="post-image">
+          <img src="./../assets/Screenshot 2024-02-28 114227.png" alt="Post Image">
+      </div>
+      <div class="post-caption">
+          <p>API testing involves testing the application programming interfaces (APIs) directly, without a graphical user interface. APIs enable communication and data exchange between different software systems. API testing ensures that APIs function correctly, reliably, securely, and performantly, meeting the requirements specified in their design.
+
+          #Qyrus #Testing #API</p>
+      </div>
+  </div>  
   </div>
 </div>
+
+
+
 
 

@@ -44,7 +44,7 @@
 }
 
 .body{
-    margin: 75px;
+    // margin: 75px;
 
 }
 
@@ -56,8 +56,7 @@
 }
 
 .label-upload{
-
-    width: 375px;
+    width: 60px;
     height: 50px;
     background-color: black;
     color: #ffffff;
@@ -82,3 +81,121 @@
     cursor: inherit;
     display: none;
   }
+
+
+  .post-body{
+    width: 100%;
+    // overflow-y: scroll;
+    display: flex;
+  }
+
+
+.post {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.post-header {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.post-header .username {
+    font-weight: bold;
+}
+.post-image {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+.post-image img {
+    width: 100%;
+    height: 300px !important;
+}
+.post-caption {
+    padding: 10px;
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+  .contentt {
+    position: fixed; 
+    top:30px;
+    right: 200px;
+    width: 75vw;
+    margin-left: 50px;
+
+    .releases-header{
+        display: flex;
+        height: 60px;
+        width: 100%;
+        span{
+            font-size: 26px;
+            font-weight: 900;
+            font-family: cursive;
+        }
+        
+    }
+    .list-release{
+        background-color:  rgb(204, 244, 204);
+        border-radius: 10px;
+        position: relative;
+    }
+     .releases-body :hover{
+        background-color:  rgb(172, 236, 172);
+     }
+
+  }
+
+  .back-campaing{
+    background-color:  rgb(172, 236, 172);
+    border: rgb(172, 236, 172);
+    height: 30px;
+    border-radius: 30px;
+  }
+
+  .back-campaing :hover{
+    background-color:  rgb(161, 242, 161);
+
+  }
+
+  .gotopost{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    border:  rgb(66, 211, 117);;
+    margin-right: 10px;
+
+  }
+  .gotopost:hover{
+    background-color: rgb(66, 211, 117);
+  }
+
+  .nav-list{
+    &hover{
+        background-color: black;
+        color: white;
+    }
+  }
+
+  .list-release{
+    margin: 10px;
+    padding-top: 10PX;
+  }
+

@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { SocialSparkService } from './social-spark.service';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -53,5 +54,16 @@ export class AppComponent {
     //     console.log("Error:",err.error);
     //   });
     
+  }
+
+  isCamp = false;
+  isPost = false;
+
+  gotoPost(){
+    this.isPost = true
+  }
+
+  backToCampain(){
+    this.isCamp = true;
   }
 }
